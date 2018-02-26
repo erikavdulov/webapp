@@ -1,0 +1,26 @@
+
+
+
+h1 {
+color:#727b82;
+
+}
+
+
+body {
+  background-color: #1D1F21;
+}
+
+p {
+  color:#727b82;
+}
+
+/*cmonBruh*/
+.colored {
+  color:#727b82;
+}
+
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
