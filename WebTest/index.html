@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title> Who Loves ponda? </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <h1> The super website that ponda learned JavaScript&trade; on </h1>
+
+    <img src="Images/ponda.png" alt = "Cool Image 1" style ="max-width:35%;height=auto;">
+    <img src="Images/ponda.png" alt = "Cool Image 2" style ="max-width:35%;height=auto;">
+
+    <div id ="main">
+      <p id="first" class = "intro"> Very nice meme!. </p>
+      <p class = "intro"> Only 399.99! </p>
+      <button id ="btn"> Super Button 5000</button>
+    </div>
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    <p class = "colored"> wow insane price </p>
+  </div>
+
+    <script>
+
+    function mOver(obj){
+      obj.innerHTML = "That's a great price"
+    }
+    function mOut(obj){
+      obj.innerHTML = "only 399.99?"
+    }
+
+    </script>
+
+
+    <script>
+
+      function veryNice(){
+        var text = "That's a great price!";
+        document.getElementById("nice").innerHTML = "text"()
+      }
+
+      document.getElementById("btn").onclick= function(){
+        veryNice()
+      }
+    </script>
+
+    <script src = "Scripts/upperCase.js"></script>
+
+    <p>  Enter your name: </p><input type=" text"id="names" onchange="Testing Server Push()">
+
+
+  </body>
+
+<footer>
+<p> Footer </p>
+</footer>
+
+</html>
