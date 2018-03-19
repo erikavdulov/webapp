@@ -9,16 +9,6 @@
 	<script src="JS/page.js"></script>
 </head>
 <body>
-	<!--the purpose of this PHP code is to remember who's logged in-->
-	<?php
-		session_start();
-		if(isset($_SESSION['user_id'])){
-
-			echo '<div class="user-info">' . $_SESSION['name'] . '       '  . $_SESSION['mail'] . '</div>';
-		}else{
-			header('Location: logIn.html');
-		}
-	?>
 
 	<div id="container">			<!--contains all divs-->
 		<div class="section">		<!--header section-->
@@ -37,14 +27,6 @@
 		<div id="articleMenu">		<!--the section deviding header and body parts; contains 'upload' and 'search' buttons-->
 			<button onclick="showUploadDiv()" id="btnUpload" class="btn">upload</button>		<!--'upload' button opens uploadDiv-->
 			<button onclick="showSearchDiv()" id="btnSearch" class="btn">search</button>		<!--'search' button opens searchDiv-->
-			<span title="Choose from the two options if you want to upload or search for files.">
-			<img src="images/icons/hintIcon.png" alt="hintIcon" height="20px" width="20px" ></img>	<!--hoverable question mark-->
-			</span>
-			<span id="menuInfoIcon" title="Clicking on any of the four windows down below will open a gallery with your files where you can download and/or delete
-them from. There will be nothing displayed until you upload files. Press 'HOME' button at the top right corner to go back.">
-			<img src="images/icons/infoIcon.png" alt="infoIcon" height="40px" width="40px" ></img>	<!--hoverable info image-->
-			Hover me for help!
-			</span>
 		</div>
 		<div class="article">				<!--main div-->
 			<div id="searchForm">			<!--file search form is contained in article div-->
@@ -63,9 +45,6 @@ them from. There will be nothing displayed until you upload files. Press 'HOME' 
 					<input class="btn" id="uploadFile" name="uploadFile" type="file">				<!--button allows the user to choose file from their device-->
 					<input id="uName" type="text" name="uploadName" placeholder="Name"><br>			<!--name field-->
 					<input id="uDesc" type="text" name="uploadDesc" placeholder="Description"><br>	<!--description field-->
-					<span id="uploadSearchHint" title="To upload a file please choose the file from your device and fill in the fields for easier future search.">
-					<img src="images/icons/hintIcon.png" alt="hintIcon" height="20px" width="20px" ></img>	<!--hoverable upload hint question mark-->
-					</span>
 					<span class="btn" onclick="hideUploadDiv()" id="uClose">Close</span>			<!--close button-->
 					<input class="btn" name="file-upload" id="uSubmit" type="submit" value="Submit"><!--submit button-->
 				</form>
@@ -75,14 +54,14 @@ them from. There will be nothing displayed until you upload files. Press 'HOME' 
 					<td>
 						<span onclick="getData('music')" >
 							<div id="first" class="item">	<!--div displaying user's music when clicked-->
-								<span>Music</span>
+								<span>Example1</span>
 							</div>
 						  </span>
 					</td>
 					<td>
 						<span onclick="getData('videos')" >
 							<div id="first" class="item">	<!--div displaying user's videos when clicked-->
-								<span>Videos</span>
+								<span>Example2</span>
 							</div>
 						 </span>
 					</td>
@@ -91,14 +70,14 @@ them from. There will be nothing displayed until you upload files. Press 'HOME' 
 					<td>
 						<span onclick="getData('pictures')" >
 							<div id="first" class="item">	<!--div displaying user's pictures when clicked-->
-								<span>Pictures</span>
+								<span>Example3</span>
 							</div>
 						</span>
 					</td>
 					<td>
 						<span onclick="getData('other')" >
 							<div id="first" class="item">	<!--div displaying user's files(apart from the ones above) when clicked-->
-								<span>Other</span>
+								<span>Example4</span>
 							</div>
 						</span>
 					</td>
@@ -111,7 +90,7 @@ them from. There will be nothing displayed until you upload files. Press 'HOME' 
 		<div class="footer">		<!--footer div-->
 			<div>
 				<p>
-					copyright 2017 | all rights reserved.
+					copyright 2018 | all rights reserved.
 				</p>
 			</div>
 		</div>
