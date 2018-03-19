@@ -1,14 +1,16 @@
 
 
 
-h1 {
+h2 {
 color:#FC6FC5;
+text-align:center;
 
 }
 
 
 body {
   background-color: #1D1F21;
+  background: 
 }
 
 p {
@@ -23,4 +25,11 @@ p {
 img:hover {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+img {
+  display:inline;
+  margin-left: 35%;
+  margin-right: 50%;
+  width: 40%
 }
