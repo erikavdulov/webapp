@@ -6,7 +6,7 @@
 	<meta name="keywords" content="HTML,CSS,XML,JavaScript,PHP">
 	<title>RetroGames</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<script src="js/page.js"></script>
+	<script src="JS/page.js"></script>
 </head>
 <body>
 	<!--the purpose of this PHP code is to remember who's logged in-->
