@@ -35,6 +35,36 @@ body {
   background-color: #1D1F21;
 }
 
+#signUpDiv{								/*properties of the 'sign up' div*/
+	background-color: #1D1F21;
+  border: 1px solid black;
+  margin-top: 40px;
+  padding-bottom: 50px;
+	border-radius: 5px;
+}
+#logInBtn{
+  margin-left: 230px;
+  margin-top: 10px;
+}
+#logInBtn:hover{
+  background: #fc3d32;
+}
+#signUpBtn{
+  margin-left: 150px;
+}
+#nameReg{
+  margin-bottom: 10px;
+}
+#eMailReg{
+  margin-bottom: 10px;
+}
+#passWordReg{
+  margin-bottom: 10px;
+}
+#signUpBtn:hover{
+  background: #fc3d32;
+}
+
 p {
   color:#727b82;
 }
