@@ -1,0 +1,45 @@
+
+
+body {
+  padding-top: 54px;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+    background-color:#FFFFFF;
+
+  }
+}
+
+.navbar {
+  background-color:#58c5ff;
+
+  color: #FFFFFF;
+}
+
+.navbar-item{
+  color: #FFFFFF;
+}
+
+.navbar-brand {
+  color: #FFFFFF;
+
+}
+
+.nav-link{
+  color: white;
+}
+
+img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+
+}
+
+.header {
+  padding-top: 0px;
+}
