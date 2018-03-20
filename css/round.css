@@ -14,12 +14,19 @@ body {
 }
 
 .navbar {
-  background-color:#58c5ff;
+  background-color:#50d4ff;
+
+  background-image:image("images/banner.png");
 
   color: #FFFFFF;
+  border-bottom: 8px solid #ffffff;
 }
 
 .navbar-item{
+  color: #FFFFFF;
+}
+
+.navbar-item:hover{
   color: #FFFFFF;
 }
 
