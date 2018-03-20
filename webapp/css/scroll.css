@@ -1,49 +1,87 @@
-/*!
- * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
- */
-
-header {
-  padding: 154px 0 100px;
-}
-
-@media (min-width: 992px) {
-  header {
-    padding: 156px 0 100px;
-  }
-}
-
-section {
-  padding: 150px 0;
-}
 
 h1 {
-font-size: 25px;
-color:#727b82;
-
-}
-
-h2 {
-font-size: 25px;
-color:#727b82;
-text-decoration: line-through;
-
-}
-
-body {
-  background-color: #1D1F21;
+  color: #424242;
 }
 
 p {
-  color:#727b82;
+  color: #424242;
 }
 
-p2 {
-  color:#727b82;
+body {
+  padding-top: 54px;
+  background-color: #FFFFFF;
 }
 
-/*cmonBruh*/
-.colored {
-  color:#727b82;
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+    background-color:#ffffff;
+  }
 }
+
+.nav a.hover {
+  color: #FFFFFF;
+}
+
+.header{
+  /* border experimental */
+  border-bottom: 8px solid #58d3fb;
+}
+
+.search {
+  padding-top: 6px;
+}
+
+.navbar {
+  /* background-color:#50d4ff;
+  pink ff9ea9
+  blue 58d3fb
+
+   */
+
+  padding: 14px 15px;
+  background-color: white;
+  border-bottom: 8px solid #58d3fb;
+  font-size: 18px;
+}
+
+.navbar-item{
+  color: #ff9ea9;
+}
+
+.nav-link{
+  color: #ff9ea9;
+}
+
+.navbar .search-container button {
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
+}
+
+.navbar-brand {
+  color: #ff9ea9;
+  font-size: 32px;
+}
+
+img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+
+}
+
+
+.footer {
+  display:block;
+
+}
+
+
+
+
+
+
+/* end of css */

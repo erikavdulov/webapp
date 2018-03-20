@@ -1,22 +1,110 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
-    <link rel="stylesheet" type="text/css" href="styles/syles.css">
 
-    <meta charset="UTF-8">
-    <title> Login </title>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bannerFade.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Log In">
+    <meta name="author" content="Dominik">
+
+    <title>Log In page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scroll.css" rel="stylesheet">
+    <link href="css/round.css" rel="stylesheet">
+
   </head>
 
-  <body>
+  <body id="page-top">
+
+    <div class="header">
+      <img src="images/banner4.png" id="banner">
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Retro Database Search</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="search ">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search Game.." name="search">
+              </form>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">View</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="container">
+      <div class="container text-center">
+        <h2>Sign In</h2>
+        <form id="logInForm" action=""  method="post">
+          <input id="eMailLog" type="text" name="eMailLog" placeholder="Email">	<!--email field-->
+          <input id="passWordLog" type="password" name="passWordLog" placeholder="Password"><br>	<!--password field-->
+          <input class="btn" name="user-login" id="logInBtn" type="submit" value="Log In">	<!--log in button-->
+        </form></br>
+        <p id="regLabel">Create an account</p>
+        <form id="regForm" action="" method="post" onsubmit="return validateForm()">	<!--when submitted, calls function to validate data-->
+          <input id="nameReg" type="text" name="nameReg" placeholder="Name"><br>					<!--name field-->
+          <input id="eMailReg" type="text" name="emailReg" placeholder="Email"><br>				<!--email field-->
+          <input id="passWordReg" type="password" name="passwordReg" placeholder="Password"><br>	<!--password field-->
+          <input class="btn" name="user-submit" id="signUpBtn" type="submit" value="Create an account">	<!--create an account button-->
+        </form>
+      </div>
+    </header>
 
 
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">copyright 2018 | all rights reserved.</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
 
   </body>
 
-  <footer>
-
-  </footer>
-
-  </html>
+</html>
