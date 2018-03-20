@@ -70,6 +70,49 @@ body {
   color: #ff9ea9;
   font-size: 32px;
 }
+#nameReg{
+  margin-bottom: 7px;
+}
+#eMailReg{
+  margin-bottom: 7px;
+}
+#passWordReg{
+  margin-bottom: 7px;
+}
+#logInBtn{
+  margin-top: 7px;
+}
+#signUpBtn{
+  margin-bottom: 10px;
+}
+.btn{
+  background-color: #ff9ea9;
+}
+
+.btn:hover{
+  background: #ff9ea9;
+  background-image: -webkit-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -moz-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -ms-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -o-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: linear-gradient(to bottom, #58d3fb, #58d3fb);
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #ff9ea9;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ff9ea9;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ff9ea9;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #ff9ea9;
+  opacity: 1;
+}
 
 img {
   display:block;
@@ -77,6 +120,14 @@ img {
   margin-right: auto;
   width: 95%;
 
+}
+
+#regForm.input{
+  border: #58d3fb;
+  color: #ff9ea9;
+}
+.input{
+  color: #ff9ea9;
 }
 
 
