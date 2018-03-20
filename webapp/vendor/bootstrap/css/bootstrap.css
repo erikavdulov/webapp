@@ -3972,6 +3972,7 @@ tbody.collapse.show {
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -6234,6 +6235,10 @@ button.bg-dark:focus {
   border-color: #343a40 !important;
 }
 
+/* .border-white {
+  border-color: #fff !important;
+} */
+
 .border-white {
   border-color: #fff !important;
 }
@@ -6263,7 +6268,8 @@ button.bg-dark:focus {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 50%!important;
+  border-radius: black;
 }
 
 .rounded-0 {
