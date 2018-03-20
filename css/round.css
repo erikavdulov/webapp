@@ -3,6 +3,20 @@ h1 {
   color: #424242;
 }
 
+h2 {
+  color: #424242;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  color: #424242;
+  font-size: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 p {
   color: #424242;
 }
@@ -26,6 +40,7 @@ body {
 .header{
   /* border experimental */
   border-bottom: 8px solid #58d3fb;
+  padding-top:2%;
 }
 
 .search {
@@ -77,6 +92,47 @@ img {
 .footer {
   display:block;
 
+}
+
+.regLabel {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.regForm {
+  padding-top: 25px;
+}
+
+
+.btn {
+  margin-top: 15px;
+  color: white;
+  background-color: #ff9ea9;
+}
+
+.signUpBtn {
+  padding-bottom: 25px;
+}
+
+.footer {
+  border-top: 4px solid #58d3fb;
+  background-color: #ff9ea9;
+  height: 65px;
+  margin-top: auto;
+
+}
+
+.aSearch {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 25px;
+  text-align: center;
+}
+
+.aTitle {
+  padding-bottom: 25px;
 }
 
 
