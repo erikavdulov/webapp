@@ -5,21 +5,13 @@
  */
 
 header {
-  /*padding: 154px 0 100px;*/
+  padding: 154px 0 100px;
 }
 
 @media (min-width: 992px) {
   header {
     padding: 156px 0 100px;
   }
-}
-
-div.row{
-  text-align: center important!;
-}
-
-div.container.text-center{
-
 }
 
 section {
@@ -43,44 +35,8 @@ body {
   background-color: #1D1F21;
 }
 
-#signUpDiv{								/*properties of the 'sign up' div*/
-	background-color: #1D1F21;
-  border: 1px solid black;
-  margin-top: 40px;
-  padding-bottom: 50px;
-	border-radius: 5px;
-}
-#logInBtn{
-  margin-left: 230px;
-  margin-top: 10px;
-}
-#logInBtn:hover{
-  background: #fc3d32;
-}
-#signUpBtn{
-  margin-left: 150px;
-}
-#nameReg{
-  margin-bottom: 10px;
-}
-#eMailReg{
-  margin-bottom: 10px;
-}
-#passWordReg{
-  margin-bottom: 10px;
-}
-#signUpBtn:hover{
-  background: #fc3d32;
-}
-#regLabel{
-  color: #ffffff;
-}
-
 p {
-  color:#fc6fc5;
-}
-#li.nav-item {
-  color : #fc6fc5;
+  color:#727b82;
 }
 
 p2 {
