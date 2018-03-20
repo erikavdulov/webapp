@@ -8,7 +8,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-    background-color:#FFFFFF;
+    background-color:#ffffff;
 
   }
 }
@@ -43,3 +43,15 @@ img {
 .header {
   padding-top: 0px;
 }
+
+.footer {
+  color: #FFFFFF;
+
+}
+
+
+
+
+
+
+/* end of css */
