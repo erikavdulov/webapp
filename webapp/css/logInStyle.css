@@ -1,10 +1,3 @@
-
-@font-face {	/*font used*/
-	font-family: 'Arimo-Bold';
-	src: url('../fonts/Arimo-Bold/Arimo-Bold.eot');
-	src: url('../fonts/Arimo-Bold/Arimo-Bold.woff') format('woff'), url('../fonts/Arimo-Bold/Arimo-Bold.ttf') format('truetype'), url('../fonts/Arimo-Bold/Arimo-Bold.svg') format('svg');
-}
-
 body {
 	background: url(../images/headerImg.png) repeat-x top center;	/*header background*/
 	line-height: 1;
@@ -14,7 +7,6 @@ body {
 #container {	/*setting up width of the page*/
 	margin: 0 auto;
 	padding: 0;
-	width: 960px;
 }
 #container .section {
 	margin: 0;
@@ -25,7 +17,7 @@ body {
 	float: left;
 	margin: 0;
 	padding: 60px 0 0 10px;
-	width: 324px;
+	width: auto;
 }
 #container .section .header p {	/*setting up properties for the title*/
 	color: #fff;
