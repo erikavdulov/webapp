@@ -14,29 +14,36 @@ body {
 }
 
 .navbar {
-  background-color:#50d4ff;
+  /* background-color:#50d4ff;
+  pink ff9ea9
+  blue 58d3fb
 
-  background-image:image("images/banner.png");
+   */
 
-  color: #FFFFFF;
-  border-bottom: 8px solid #ffffff;
+  padding: 14px 15px;
+  background-color: white;
+  border-bottom: 8px solid #58d3fb;
+  font-size: 18px;
 }
 
 .navbar-item{
-  color: #FFFFFF;
+  color: #ff9ea9;
 }
 
-.navbar-item:hover{
-  color: #FFFFFF;
+.nav-link{
+  color: #ff9ea9;
+}
+
+.navbar .search-container button {
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
 }
 
 .navbar-brand {
   color: #FFFFFF;
 
-}
-
-.nav-link{
-  color: white;
 }
 
 img {
