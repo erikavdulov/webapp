@@ -1,4 +1,11 @@
 
+h1 {
+  color: #424242;
+}
+
+p {
+  color: #424242;
+}
 
 body {
   padding-top: 54px;
@@ -8,23 +15,54 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-    background-color:#FFFFFF;
-
+    background-color:#ffffff;
   }
 }
 
-.navbar {
-  background-color:#ff9ea9;
-  text-decoration-color: #FFFFFF;
+.nav a.hover {
+  color: #FFFFFF;
 }
 
-.nav-item{
-  text-decoration-color: #FFFFFF;
+.header{
+  /* border experimental */
+  border-bottom: 8px solid #58d3fb;
+}
+
+.search {
+  padding-top: 6px;
+}
+
+.navbar {
+  /* background-color:#50d4ff;
+  pink ff9ea9
+  blue 58d3fb
+
+   */
+
+  padding: 14px 15px;
+  background-color: white;
+  border-bottom: 8px solid #58d3fb;
+  font-size: 18px;
+}
+
+.navbar-item{
+  color: #ff9ea9;
+}
+
+.nav-link{
+  color: #ff9ea9;
+}
+
+.navbar .search-container button {
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
 }
 
 .navbar-brand {
-text-decoration-color: #FFFFFF;
-
+  color: #ff9ea9;
+  font-size: 32px;
 }
 
 img {
@@ -35,6 +73,15 @@ img {
 
 }
 
-.header {
-  padding-top: 0px;
+
+.footer {
+  display:block;
+
 }
+
+
+
+
+
+
+/* end of css */
