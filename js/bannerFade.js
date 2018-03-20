@@ -2,6 +2,5 @@
 
 
 $(function () {
-  $('#banner').hide().fadeIn(1700);
-
+  $('#banner').hide().fadeIn(2500);
 });
