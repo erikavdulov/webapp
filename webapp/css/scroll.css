@@ -5,13 +5,21 @@
  */
 
 header {
-  padding: 154px 0 100px;
+  /*padding: 154px 0 100px;*/
 }
 
 @media (min-width: 992px) {
   header {
     padding: 156px 0 100px;
   }
+}
+
+div.row{
+  text-align: center important!;
+}
+
+div.container.text-center{
+
 }
 
 section {
@@ -64,9 +72,15 @@ body {
 #signUpBtn:hover{
   background: #fc3d32;
 }
+#regLabel{
+  color: #ffffff;
+}
 
 p {
-  color:#727b82;
+  color:#fc6fc5;
+}
+#li.nav-item {
+  color : #fc6fc5;
 }
 
 p2 {
