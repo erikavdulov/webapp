@@ -57,6 +57,25 @@ body {
 #row6:hover{
   opacity: 0.8;
 }
+.button:hover{
+  background: #ff9ea9;
+  background-image: -webkit-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -moz-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -ms-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -o-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: linear-gradient(to bottom, #58d3fb, #58d3fb);
+  text-decoration: none;
+}
+
+.button1:hover{
+  background: #ff9ea9;
+  background-image: -webkit-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -moz-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -ms-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: -o-linear-gradient(top, #58d3fb, #58d3fb);
+  background-image: linear-gradient(to bottom, #58d3fb, #58d3fb);
+  text-decoration: none;
+}
 
 .navbar {
   /* background-color:#50d4ff;
