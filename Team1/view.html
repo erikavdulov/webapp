@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+<!-- HTML page for user to view the results -->
 <html lang="en">
 
   <head>
 
+<!-- Linking the Scripts-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bannerFade.js"></script>
-
+<!-- adding the Metatags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -26,13 +28,13 @@
   </head>
 
   <body>
-
+    <!-- the banner image-->
     <div class="header">
       <img src="images/banner4.png" id="banner">
 
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Retro Database Search</a>
@@ -70,37 +72,35 @@
 
 
 
-    <!-- Page Content -->
+    <!-- The reuslts from the search  -->
     <div class="container">
-
-<!-- Introduction Row -->
-
       <h1 class="my-4">Retro Games
         <small>Forgotten Games</small>
 
-<!-- Team Members Row -->
+<!--the reuslt will show the game image -->
       <div class="row">
         <div class="col-lg-12">
           <h2 class="my-4 text-center">Results</h2>
         </div>
-<!-- Div  -->
 <div class="col-lg-4 col-sm-6 text-center mb-4" id="row1">
-  <!--the reuslt will show the game image -->
   <img class="img-fluid d-block mx-auto" src="images/cover.jpg" alt="">
 <!--the game title and game year -->
   <h3>Game Title</h3>
     <small>Game Year</small>
 </div>
-<div class="col-sm">
-  <!-- The game description and ratinfs from the database will show here -->
-    <small>Game description and ratings</small>
+<div class="col-sm" id="row2">
+  <!-- The game description and ratings from the database will show here -->
+  <!-- the user will be able to the game to the wishlist-->
+    <small>The genre</small>
+    <br>
+    <small>Game description</small>
    </div>
+<div class ="col-sm" id="row3">
+    <small>The rating of the game</small>
+    <br>
+    <button type="button">Add to wishlist </button>
 
-
-
-
-
-
+  </div>
 
     </div>
     <!-- /.container -->
