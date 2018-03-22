@@ -39,6 +39,25 @@ body {
   padding-top: 6px;
 }
 
+#row1:hover{
+  opacity: 0.8;
+}
+#row2:hover{
+  opacity: 0.8;
+}
+#row3:hover{
+  opacity: 0.8;
+}
+#row4:hover{
+  opacity: 0.8;
+}
+#row5:hover{
+  opacity: 0.8;
+}
+#row6:hover{
+  opacity: 0.8;
+}
+
 .navbar {
   /* background-color:#50d4ff;
   pink ff9ea9
