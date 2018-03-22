@@ -25,6 +25,7 @@ body {
   }
 }
 
+
 .nav a.hover {
   color: #FFFFFF;
 }
@@ -37,6 +38,12 @@ body {
 
 .search {
   padding-top: 6px;
+}
+
+.ul {
+  font-size: 25px;
+  padding-left: 2%;
+
 }
 
 #row1:hover{
@@ -160,7 +167,6 @@ img {
 
 }
 
-<<<<<<< HEAD
 button {
   margin: 5px;
 }
