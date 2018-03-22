@@ -155,6 +155,16 @@ button {
   margin-right: auto;
 }
 
+.button {
+  background-color: #ff9ea9;
+  border-radius: 12px;
+}
+
+.button1 {
+  background-color: #ff9ea9;
+  border-radius: 12px;
+}
+
 
 
 
