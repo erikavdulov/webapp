@@ -1,6 +1,6 @@
 $(function(){
   //ready
-  alert ("document ready");
+  //alert ("document ready");
 
   /*$('#searchform').submit(function(){
     var searchterms=$("#searchterms").val();
@@ -13,7 +13,7 @@ $(function(){
 function getResultsFromIGDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?apikey=1b4f6264=" + searchterms;
+  var url ="http://www.omdbapi.com/?apikey=1b4f6264&s=" + searchterms;
   //use jquery json shortcut
   $.getJson(url,function(jsondata){
     //handle the results
