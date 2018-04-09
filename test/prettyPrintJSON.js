@@ -1,14 +1,14 @@
-/*$(function(){
+$(function(){
   //ready
   alert ("document ready");
 
-  /*$('#searchform').submit(function(){
+  $('#searchform').submit(function(){
     var searchterms=$("#searchterms").val();
     //call search youtube function
     getResultsFromIGDB(searchterms);
     return false;
-  });*/
-});*/
+  });
+});
 
 function getResultsFromIGDB(searchterms){
   //call api using ajax
