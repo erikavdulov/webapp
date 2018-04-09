@@ -13,7 +13,7 @@ $(function(){
 function getResultsFromIGDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?i=tt3896198&apikey=1b4f6264&s=" + searchterms;
+  var url ="http://www.omdbapi.com/?apikey=1b4f6264&s=" + searchterms;
   //use jquery json shortcut
   $.getJson(url,function(jsondata){
     //handle the results
