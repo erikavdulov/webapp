@@ -1,4 +1,4 @@
-/*$(function(){
+$(function(){
   //ready
   alert ("document ready");
 
@@ -8,7 +8,7 @@
     getResultsFromIGDB(searchterms);
     return false;
   });
-});*/
+});
 
 function getResultsFromIGDB(searchterms){
   //call api using ajax
