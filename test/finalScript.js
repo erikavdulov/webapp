@@ -5,17 +5,17 @@ $(function(){
   $('#searchform').submit(function(){
     var searchterms=$("#searchterms").val();
     //call search youtube function
-    getResultsFromIGDB(searchterms);
+    getResultsFromOMDB(searchterms);
     return false;
   });
 });
 
-function getResultsFromIGDB(searchterms){
+function getResultsFromOMDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?i=tt3896198&apikey=a6213293&s=" + searchterms;
+  var url ="http://www.omdbapi.com/?apikey=a6213293&s=" + searchterms;
   //use jquery json shortcut
-  $.getJson(url,function(jsondata){
+  $.getJSON(url,function(jsondata){
     //handle the results
     addResultTitles(jsondata);
   });
