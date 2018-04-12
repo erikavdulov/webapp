@@ -17,15 +17,19 @@ function getResultsFromIGDB(searchterms){
   //use jquery json shortcut
   $.getJson(url,function(jsondata){
     //handle the results
-    prettyprintJSON(jsondata);
+    addResultTitles(jsondata);
   });
 
 
 }
 
 
-function prettyprintJSON(jsondata){
-  //prints the json to the screen
-  var pretty= JSON.stringify(jsondata, null,4);
-  $('#resultsbox').append("<pre>"+pretty + "</pre>");
+function addResultTitles(jsondata){
+  var htmlstring = "";
+  for (var i=0; i<10; i++){
+    var title = jsondata.Search[i].Title;
+    htmlstring += "<li>" + title + "</li>";
+  }
+  
+  $("#results").html(htmlstring);
 }
