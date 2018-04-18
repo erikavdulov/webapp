@@ -13,7 +13,7 @@ $(function(){
 function getResultsFromOMDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?apikey=a6213293&s=" + searchterms;
+  var url ="https://api-endpoint.igdb.com/?apikey=8fd263ee7124bbe3816cb5bba4e3c3ca&s=" + searchterms;
   //use jquery json shortcut
   $.getJSON(url,function(jsondata){
     //handle the results
