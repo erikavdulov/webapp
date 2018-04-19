@@ -15,6 +15,8 @@ const session = require('express-session'); //npm install express-session
 const bodyParser = require('body-parser'); //npm install body-parser
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 //this tells express we are using sesssions. These are variables that only belong to one user of the site at a time.
 app.use(session({ secret: 'example' }));
 
@@ -39,7 +41,7 @@ MongoClient.connect(url, function(err, database) {
 //********** GET ROUTES - Deal with displaying pages ***************************
 
 //this is our root route
-app.get('/', function(req, res) {
+app.get('/index', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/login');return;}
 
@@ -79,9 +81,9 @@ app.get('/profile', function(req, res) {
 
 });
 //adduser route simply draws our adduser page
-app.get('/login', function(req, res) {
+app.get('/adduser', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
-  res.render('pages/login')
+  res.render('pages/adduser')
 });
 //remuser route simply draws our remuser page
 app.get('/remuser', function(req, res) {
@@ -90,7 +92,7 @@ app.get('/remuser', function(req, res) {
 });
 //logour route cause the page to Logout.
 //it sets our session.loggedin to false and then redirects the user to the login
-app.get('/login', function(req, res) {
+app.get('/logout', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/');
@@ -114,7 +116,7 @@ app.post('/dologin', function(req, res) {
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/login');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/') }
+    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/index') }
     //otherwise send them back to login
     else{res.redirect('/login')}
   });
@@ -131,7 +133,7 @@ app.post('/delete', function(req, res) {
   db.collection('people').deleteOne({"login.username":uname}, function(err, result) {
     if (err) throw err;
     //when complete redirect to the index
-    res.redirect('/');
+    res.redirect('/index');
   });
 });
 
