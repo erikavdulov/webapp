@@ -79,9 +79,9 @@ app.get('/profile', function(req, res) {
 
 });
 //adduser route simply draws our adduser page
-app.get('/adduser', function(req, res) {
+app.get('/login', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
-  res.render('pages/adduser')
+  res.render('pages/login')
 });
 //remuser route simply draws our remuser page
 app.get('/remuser', function(req, res) {
@@ -90,7 +90,7 @@ app.get('/remuser', function(req, res) {
 });
 //logour route cause the page to Logout.
 //it sets our session.loggedin to false and then redirects the user to the login
-app.get('/logout', function(req, res) {
+app.get('/login', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
   res.redirect('/');

@@ -1,36 +1,96 @@
 <!DOCTYPE html>
-<html>
+<!-- HTML page for creating user login accounts -->
+<html lang="en">
 
-<header>
-  <% include ../partials/head %>
-</header>
+  <head>
+    <!-- Linking Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bannerFade.js"></script>
+    <script src="js/loginValidation.js"></script>
+    <!-- Adding Metatags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Log In">
+    <meta name="author" content="Dominik">
 
+    <title>Login</title>
 
-<body class="container">
-    <header>
-      <% include ../partials/header %>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/scroll.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+
+  </head>
+
+  <body id="page-top">
+    <!-- Banner Image -->
+    <div class="header">
+      <img src="images/banner4.png" id="banner">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Retro Database Search</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="search ">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search Game.." name="search">
+              </form>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="view.html">View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wishlist.html">Wishlist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Main login details div -->
+    <header class="container">
+      <div class="container text-center">
+        <h2>Sign In</h2>
+        <form id="logInForm" action="/dologin"  method="POST">
+          <input id="eMailLog" type="text" name="eMailLog" placeholder="Email" style="border-color: #58d3fb; border-radius: 3px;">	<!--email field-->
+          <input id="passWordLog" type="password" name="passWordLog" placeholder="Password" style="border-color: #58d3fb; border-radius: 3px;"><br>	<!--password field-->
+          <input class="btn" name="user-login" id="logInBtn" type="submit" value="Log In">	<!--log in button-->
+        </form></br>
+        <h2>Create an account</h2>
+        <form id="regForm" action="/dologin" method="POST" onsubmit="return validateForm()">	<!--when submitted, calls function to validate data-->
+          <input id="nameReg" type="text" name="nameReg" placeholder="Name" style="border-color: #58d3fb; border-radius: 3px;"><br>					<!--name field-->
+          <input id="eMailReg" type="text" name="emailReg" placeholder="Email" style="border-color: #58d3fb; border-radius: 3px;"><br>				<!--email field-->
+          <input id="passWordReg" type="password" name="passwordReg" placeholder="Password" style="border-color: #58d3fb; border-radius: 3px;"><br>	<!--password field-->
+          <input class="btn" name="user-submit" id="signUpBtn" type="submit" value="Create">	<!--create an account button-->
+        </form>
+      </div>
     </header>
 
-  <main>
-    <div class="jumbotron">
-
-      <h2>Login</h2>
-      <!-- simple login form, submits to our /dologin route -->
-      <form action="/dologin" method="POST">
-        <input type="text" placeholder="username" name="username">
-        <input type="password" placeholder="password" name="password">
-        <button type="submit">Submit</button>
-      </form>
-
-
-    </div>
-  </main>
-
-
-  <footer>
-    <% include ../partials/footer %>
-  </footer>
-
-</body>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">copyright 2018 | all rights reserved.</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+  </body>
 
 </html>
