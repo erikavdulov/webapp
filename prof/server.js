@@ -42,7 +42,7 @@ MongoClient.connect(url, function(err, database) {
 //********** GET ROUTES - Deal with displaying pages ***************************
 
 //this is our root route
-app.get('/index', function(req, res) {
+app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
   if(!req.session.loggedin){res.redirect('/login');return;}
 
@@ -156,21 +156,15 @@ app.post('/delete', function(req, res) {
 //"picture":{"large":"https://randomuser.me/api/portraits/women/42.jpg","medium":"https://randomuser.me/api/portraits/med/women/42.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/42.jpg"},
 //"nat":"GB"}
 
-app.post('/adduser', function(req, res) {
+app.post('/doreg', function(req, res) {
   //check we are logged in
   if(!req.session.loggedin){res.redirect('/login');return;}
 
   //we create the data string from the form components that have been passed in
 
 var datatostore = {
-"gender":req.body.gender,
-"name":{"title":req.body.title,"first":req.body.first,"last":req.body.last},
-"location":{"street":req.body.street,"city":req.body.city,"state":req.body.state,"postcode":req.body.postcode},
-"email":req.body.email,
+"email":req.body.name,
 "login":{"username":req.body.username,"password":req.body.password},
-"dob":req.body.dob,"registered":Date(),
-"picture":{"large":req.body.large,"medium":req.body.medium,"thumbnail":req.body.thumbnail},
-"nat":req.body.nat}
 
 
 //once created we just run the data string against the database and all our new data will be saved/

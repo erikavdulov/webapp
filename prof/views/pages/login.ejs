@@ -75,10 +75,10 @@
           <input class="btn" name="user-login" id="logInBtn" type="submit" value="Log In">	<!--log in button-->
         </form></br>
         <h2>Create an account</h2>
-        <form id="regForm" action="/adduser" method="POST" onsubmit="return validateForm()">	<!--when submitted, calls function to validate data-->
-          <input id="nameReg" type="text" name="nameReg" placeholder="Name" style="border-color: #58d3fb; border-radius: 3px;"><br>					<!--name field-->
-          <input id="eMailReg" type="text" name="emailReg" placeholder="Email" style="border-color: #58d3fb; border-radius: 3px;"><br>				<!--email field-->
-          <input id="passWordReg" type="password" name="passwordReg" placeholder="Password" style="border-color: #58d3fb; border-radius: 3px;"><br>	<!--password field-->
+        <form id="regForm" action="/doreg" method="POST" onsubmit="return validateForm()">	<!--when submitted, calls function to validate data-->
+          <input id="nameReg" type="text" name="name" placeholder="Name" style="border-color: #58d3fb; border-radius: 3px;"><br>					<!--name field-->
+          <input id="eMailReg" type="text" name="username" placeholder="Email" style="border-color: #58d3fb; border-radius: 3px;"><br>				<!--email field-->
+          <input id="passWordReg" type="password" name="password" placeholder="Password" style="border-color: #58d3fb; border-radius: 3px;"><br>	<!--password field-->
           <input class="btn" name="user-submit" id="signUpBtn" type="submit" value="Create">	<!--create an account button-->
         </form>
       </div>
