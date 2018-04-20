@@ -74,7 +74,7 @@ app.get('/profile', function(req, res) {
   //this query finds the first document in the array with that username.
   //Because the username value sits in the login section of the user data we use login.username
   db.collection('people').findOne({
-    "login.username": uname
+    "username": uname
   }, function(err, result) {
     if (err) throw err;
     //console.log(uname+ ":" + result);
@@ -116,12 +116,12 @@ app.post('/dologin', function(req, res) {
   var uname = req.body.username;
   var pword = req.body.password;
 
-  db.collection('people').findOne({"login.username":uname}, function(err, result) {
+  db.collection('people').findOne({"username":uname}, function(err, result) {
     if (err) throw err;//if there is an error, throw the error
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/login');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/index') }
+    if(result.password == pword){ req.session.loggedin = true; res.redirect('/index') }
     //otherwise send them back to login
     else{res.redirect('/login')}
   });
@@ -135,7 +135,7 @@ app.post('/delete', function(req, res) {
   var uname = req.body.username;
 
   //check for the username added in the form, if one exists then you can delete that doccument
-  db.collection('people').deleteOne({"login.username":uname}, function(err, result) {
+  db.collection('people').deleteOne({"username":uname}, function(err, result) {
     if (err) throw err;
     //when complete redirect to the index
     res.redirect('/index');
@@ -163,14 +163,9 @@ app.post('/doreg', function(req, res) {
   //we create the data string from the form components that have been passed in
 
 var datatostore = {
-"gender":req.body.gender,
-"name":{"title":req.body.title,"first":req.body.first,"last":req.body.last},
-"location":{"street":req.body.street,"city":req.body.city,"state":req.body.state,"postcode":req.body.postcode},
-"email":req.body.email,
-"login":{"username":req.body.username,"password":req.body.password},
-"dob":req.body.dob,"registered":Date(),
-"picture":{"large":req.body.large,"medium":req.body.medium,"thumbnail":req.body.thumbnail},
-"nat":req.body.nat}
+"name":req.body.email,
+"username":req.body.username,
+"password":req.body.password},
 
 
 //once created we just run the data string against the database and all our new data will be saved/
