@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- HTML page for user to view the results -->
+<html lang="en">
+
+  <head>
+
+<!-- Linking the Scripts-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bannerFade.js"></script>
+<!-- adding the Metatags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Index</title>
+
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+    <!-- the banner image-->
+    <div class="header">
+      <img src="images/banner4.png" id="banner">
+
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Retro Database Search</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="search ">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search Game.." name="search">
+              </form>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="view.html">View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="wishlist.html">Wishlist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- The reuslts from the search  -->
+    <div class="container">
+      <h1 class="my-4">Game title
+        <small>Category</small>
+
+<!--the reuslt will show the game image -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4 text-center">Results</h2>
+        </div>
+<div class="col-lg-4 col-sm-6 text-center mb-4" id="row1">
+  <img class="img-fluid d-block mx-auto" src="images/cover.jpg" alt="">
+<!--the game title and game year -->
+  <h3>Game Title</h3>
+    <small>Game Year</small>
+</div>
+<div class="col-sm" id="row2">
+  <!-- The game description and ratings from the database will show here -->
+  <!-- the user will be able to the game to the wishlist-->
+    <small>The genre</small>
+    <br>
+    <small>Game description</small>
+   </div>
+<div class ="col-sm" id="row3">
+    <small>The rating of the game</small>
+    <br>
+
+
+  </div>
+
+    </div>
+    <!-- /.container -->
+<button class=button type="button" style="margin-left: 100px; font-size:20px">Add to wishlist</button>
+  </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="footer">
+        <p class="m-0 text-center text-white">Copyright &copy; Team 1 2018</p>
+      </div>
+    </footer>
+
+
+  </body>
+
+</html>

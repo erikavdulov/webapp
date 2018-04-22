@@ -66,6 +66,14 @@ app.get('/index', function(req, res) {
   res.render('pages/index');
 });
 
+app.get('/view', function(req, res) {
+  res.render('pages/view');
+});
+
+app.get('/wishlist', function(req, res) {
+  res.render('pages/wishlist');
+});
+
 //this is our profile route, it takes in a username and uses that to search the database for a specific user
 app.get('/profile', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
@@ -162,10 +170,19 @@ app.post('/doreg', function(req, res) {
 
   //we create the data string from the form components that have been passed in
 
-var datatostore = {
-"name":req.body.email,
-"username":req.body.username,
-"password":req.body.password},
+var datatostore =
+"gender":req.body.gender,
+"name":{"title":req.body.title,"first":req.body.first,"last":req.body.last},
+"location":{"street":req.body.street,"city":req.body.city,"state":req.body.state,"postcode":req.body.postcode},
+"email":req.body.email,
+"login":{"username":req.body.username,"password":req.body.password},
+"dob":req.body.dob,"registered":Date(),
+"picture":{"large":req.body.large,"medium":req.body.medium,"thumbnail":req.body.thumbnail},
+"nat":req.body.nat}
+// {
+//"name":req.body.email,
+//"username":req.body.username,
+//"password":req.body.password},
 
 
 //once created we just run the data string against the database and all our new data will be saved/
