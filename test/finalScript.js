@@ -4,6 +4,7 @@ var baseUrl = "http://www.giantbomb.com/api";
 // construct the uri with our apikey
 var GamesSearchUrl = baseUrl + '/search/?api_key=' + apikey + '&format=json';
 var query = searched();
+var userInput = "";
 
 
 $(function(){
