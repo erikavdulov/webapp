@@ -18,7 +18,7 @@ $(function(){
     return false;
   });
 });
-
+/*
 function getResultsFromOMDB(userInput){
   //call api using ajax
   //build url for the request
@@ -30,7 +30,7 @@ function getResultsFromOMDB(userInput){
   });
 
 
-}
+}*/
 
 function searched() {
         var input = document.getElementById("userInput").value;
