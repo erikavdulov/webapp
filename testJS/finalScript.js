@@ -13,7 +13,7 @@ $(function(){
 function getResultsFromOMDB(searchterms){
   //call api using ajax
   //build url for the request
-  var url ="http://www.omdbapi.com/?i=tt3896198&apikey=a6213293&s=" + searchterms;
+  var url ="https://www.giantbomb.com/api/search/?api_key=af44445c54798715ed796602012c4a33d507c499" + searchterms;
   //use jquery json shortcut
   $.getJSON(url,function(jsondata){
     //handle the results
@@ -30,6 +30,14 @@ function addResultTitles(jsondata){
     var title = jsondata.Search[i].Title;
     htmlstring += "<li>" + title + "</li>";
   }
-  
+
   $("#results").html(htmlstring);
 }
+
+
+
+function searched() {
+        var input = document.getElementById("userInput").value;
+        alert(input);
+        return(query);
+        }
