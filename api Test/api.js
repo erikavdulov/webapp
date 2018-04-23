@@ -1,13 +1,14 @@
 
 $(document).ready(function(){
+  $("button").click(function(){
     $.ajax({
       url: "http://api.giantbomb.com/search/",
       type: "get",
-      data: {api_key : "ce8a57745882a7c9e177183a8a4dfae586f1bc8b", query: "halo", resources : "game", field_list : "name, resource_type, image", format : "jsonp", json_callback : "gamer" },
+      data: {api_key : "ce8a57745882a7c9e177183a8a4dfae586f1bc8b", query: searched(), resources : "game", field_list : "name, resource_type, image", format : "jsonp", json_callback : "gamer" },
       dataType: "jsonp"
     });
 });
-
+});
 function gamer(data) {
       var table = '<table>';
       $.each( data.results, function( key, value ) {
@@ -16,3 +17,9 @@ function gamer(data) {
         table += '</table>';
     $('#myelement').html(table);
 }
+
+function searched() {
+        var input = document.getElementById("search").value;
+        alert(input);
+        return(input)
+        }
