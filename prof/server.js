@@ -62,6 +62,18 @@ app.get('/login', function(req, res) {
   res.render('pages/login');
 });
 
+app.get('/index', function(req, res) {
+  res.render('pages/index');
+});
+
+app.get('/view', function(req, res) {
+  res.render('pages/view');
+});
+
+app.get('/wishlist', function(req, res) {
+  res.render('pages/wishlist');
+});
+
 //this is our profile route, it takes in a username and uses that to search the database for a specific user
 app.get('/profile', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
