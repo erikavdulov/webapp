@@ -127,7 +127,7 @@ app.post('/dologin', function(req, res) {
     //otherwise send them back to login
     else{res.redirect('/login')}
   });
-});
+}});
 
 //the delete route deals with user deletion based on entering a username
 app.post('/delete', function(req, res) {
