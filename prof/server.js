@@ -109,9 +109,8 @@ app.get('/logout', function(req, res) {
 
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
+//if(!req.session.loggedin){res.redirect('/login');return;}
 app.post('/dologin', function(req, res) {
-  if(req.session.loggedin){res.redirect('/index');return;}
-  else{
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
   var pword = req.body.password;
@@ -119,15 +118,17 @@ app.post('/dologin', function(req, res) {
   res.redirect('/index');
 
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
-    if (err) console.log('POOP');;//if there is an error, throw the error
+    if (err) throw err;//if there is an error, throw the error
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/login');return}
+    if(req.session.loggedin){res.redirect('/index');return;
+        console.log('Cannot log in')}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
     if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/index') }
     //otherwise send them back to login
     else{res.redirect('/login')}
   });
-}});
+});
 
 //the delete route deals with user deletion based on entering a username
 app.post('/delete', function(req, res) {
