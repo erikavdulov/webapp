@@ -110,7 +110,7 @@ app.get('/logout', function(req, res) {
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 app.post('/dologin', function(req, res) {
-  if(!req.session.loggedin){res.redirect('/index');return;}
+  if(req.session.loggedin){res.redirect('/index');return;}
   else{
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
