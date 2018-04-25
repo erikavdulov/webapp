@@ -116,7 +116,7 @@ app.post('/dologin', function(req, res) {
   var uname = req.body.username;
   var pword = req.body.password;
   console.log('Logged in');
-  res.redirect('/index');}
+  res.redirect('/index');
 
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
     if (err) throw err;//if there is an error, throw the error
@@ -128,6 +128,7 @@ app.post('/dologin', function(req, res) {
     else{res.redirect('/login')}
   });
 });
+};
 
 //the delete route deals with user deletion based on entering a username
 app.post('/delete', function(req, res) {
