@@ -98,7 +98,7 @@ app.get('/remuser', function(req, res) {
 app.get('/logout', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
-  res.redirect('/');
+  res.redirect('/index');
 });
 
 
@@ -119,7 +119,7 @@ app.post('/dologin', function(req, res) {
     //if there is no result, redirect the user back to the login system as that username must not exist
     if(!result){res.redirect('/login');return}
     //if there is a result then check the password, if the password is correct set session loggedin to true and send the user to the index
-    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/') }
+    if(result.login.password == pword){ req.session.loggedin = true; res.redirect('/index') }
     //otherwise send them back to login
     else{res.redirect('/login')}
   });
@@ -156,7 +156,7 @@ app.post('/delete', function(req, res) {
 
 app.post('/adduser', function(req, res) {
   //check we are logged in
-  if(!req.session.loggedin){res.redirect('/login');return;}
+  if(!req.session.loggedin){res.redirect('/index');return;}
 
   //we create the data string from the form components that have been passed in
 
