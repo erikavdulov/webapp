@@ -164,7 +164,7 @@ app.post('/delete', function(req, res) {
 //"picture":{"large":"https://randomuser.me/api/portraits/women/42.jpg","medium":"https://randomuser.me/api/portraits/med/women/42.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/42.jpg"},
 //"nat":"GB"}
 
-app.post('/doreg', function(req, res) {
+app.post('/adduser', function(req, res) {
   //check we are logged in
   if(!req.session.loggedin){res.redirect('/login');return;}
 
@@ -186,6 +186,6 @@ var datatostore = {
     if (err) throw err;
     console.log('saved to database')
     //when complete redirect to the index
-    res.redirect('/')
+    res.redirect('/index')
   })
 });
