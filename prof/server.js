@@ -110,10 +110,13 @@ app.get('/logout', function(req, res) {
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 app.post('/dologin', function(req, res) {
+  if(!req.session.loggedin){res.redirect('/index');return;}
+  else{
   console.log(JSON.stringify(req.body))
   var uname = req.body.username;
   var pword = req.body.password;
-  console.log('HUNGRY DOG');
+  console.log('Logged in');
+  res.redirect('/index');}
 
   db.collection('people').findOne({"login.username":uname}, function(err, result) {
     if (err) throw err;//if there is an error, throw the error
