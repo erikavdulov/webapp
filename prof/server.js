@@ -43,19 +43,8 @@ MongoClient.connect(url, function(err, database) {
 
 //this is our root route
 app.get('/', function(req, res) {
-  res.redirect('/login');
   //if the user is not logged in redirect them to the login page
-  //if(!req.session.loggedin){res.redirect('/login');return;}
-
-  //otherwise perfrom a search to return all the documents in the people collection
-  db.collection('people').find().toArray(function(err, result) {
-    if (err) throw err;
-    //the result of the query is sent to the users page as the "users" array
-    res.render('pages/index', {
-      users: result
-    })
-  });
-
+  if(!req.session.loggedin){res.redirect('/index');return;}
 });
 
 //this is our login route, all it does is render the login.ejs page.
