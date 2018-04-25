@@ -42,7 +42,9 @@ MongoClient.connect(url, function(err, database) {
 //********** GET ROUTES - Deal with displaying pages ***************************
 
 //this is our root route
-app.get('pages/login', function(req, res) {
+app.get('/', function(req, res) {
+  res.redirect('/login')
+});
   //if the user is not logged in redirect them to the login page
   //if(!req.session.loggedin){res.redirect('/login');return;}
 
