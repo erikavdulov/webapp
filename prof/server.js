@@ -98,6 +98,7 @@ app.get('/remuser', function(req, res) {
 app.get('/logout', function(req, res) {
   req.session.loggedin = false;
   req.session.destroy();
+  console.log('Logged out');
   res.redirect('/index');
 });
 
