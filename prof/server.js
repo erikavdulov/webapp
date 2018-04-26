@@ -110,7 +110,6 @@ app.get('/logout', function(req, res) {
 //the dologin route detasl with the data from the login screen.
 //the post variables, username and password ceom from the form on the login page.
 //if(!req.session.loggedin){res.redirect('/login');return;}
-if(!req.session.loggedin){
   app.post('/dologin', function(req, res) {
     console.log(JSON.stringify(req.body))
     var uname = req.body.username;
@@ -127,7 +126,6 @@ if(!req.session.loggedin){
     else{res.redirect('/login')}
   });
 });
-
 //the delete route deals with user deletion based on entering a username
 app.post('/delete', function(req, res) {
   //check we are logged in.
