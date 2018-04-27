@@ -27,7 +27,7 @@ function getRequest(userInput){
     data: {
       resources: "game",
       query: userInput,
-      api_key: "8cd10a7136710c1003c8e216d85941ace5a1f00e",
+      api_key: "aa62252b36e62f2afa79ad99e6da043eb90e2da4",
       format: "jsonp",
       crossDomain: true,
       limit: 15,

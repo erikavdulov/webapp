@@ -1,9 +1,9 @@
 /**
- * @Author: John Isaacs <john>
- * @Date:   18-Mar-182018
+ * @Author:
+ * @Date:   4/2018
  * @Filename: server.js
- * @Last modified by:   john
- * @Last modified time: 27-Mar-182018
+ * @Last modified by:   TEAM 1
+ * @Last modified time: 4/2018
  */
 
 
@@ -56,14 +56,6 @@ app.get('/index', function(req, res) {
   res.render('pages/index');
 });
 
-app.get('/view', function(req, res) {
-  res.render('pages/view');
-});
-
-app.get('/wishlist', function(req, res) {
-  res.render('pages/wishlist');
-});
-
 //this is our profile route, it takes in a username and uses that to search the database for a specific user
 app.get('/profile', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
@@ -88,11 +80,7 @@ app.get('/adduser', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
   res.render('pages/adduser')
 });
-//remuser route simply draws our remuser page
-app.get('/remuser', function(req, res) {
-  if(!req.session.loggedin){res.redirect('/login');return;}
-  res.render('pages/remuser')
-});
+
 //logour route cause the page to Logout.
 //it sets our session.loggedin to false and then redirects the user to the login
 app.get('/logout', function(req, res) {
@@ -127,12 +115,7 @@ app.get('/logout', function(req, res) {
     else{res.redirect('/login')}
   });
 });
-//the delete route deals with user deletion based on entering a username
-app.post('/delete', function(req, res) {
-  //check we are logged in.
-  if(!req.session.loggedin){res.redirect('/login');return;}
-  //if so get the username variable
-  var uname = req.body.username;
+
 
   //check for the username added in the form, if one exists then you can delete that doccument
   db.collection('people').deleteOne({"login.username":uname}, function(err, result) {
@@ -143,18 +126,6 @@ app.post('/delete', function(req, res) {
 });
 
 
-//the adduser route deals with adding a new user
-//dataformat for storing new users.
-
-//{"_id":18,
-//"gender":"female",
-//"name":{"title":"miss","first":"allie","last":"austin"},
-//"location":{"street":"9348 high street","city":"canterbury","state":"leicestershire","postcode":"N7N 1WE"},
-//"email":"allie.austin@example.com",
-//"login":{"username":"smalldog110","password":"lickit"},
-//"dob":"1970-07-06 16:32:37","registered":"2011-02-08 07:10:24",
-//"picture":{"large":"https://randomuser.me/api/portraits/women/42.jpg","medium":"https://randomuser.me/api/portraits/med/women/42.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/42.jpg"},
-//"nat":"GB"}
 
 app.post('/adduser', function(req, res) {
   //check we are logged in
