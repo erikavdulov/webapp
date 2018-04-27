@@ -44,7 +44,9 @@ MongoClient.connect(url, function(err, database) {
 //this is our root route
 app.get('/', function(req, res) {
   //if the user is not logged in redirect them to the login page
-  if(!req.session.loggedin){res.redirect('/index');return;}
+  if(!req.session.loggedin){res.redirect('/index');
+  getElementById("logOutBtn").style.display = "none";
+  return;}
 });
 
 //this is our login route, all it does is render the login.ejs page.
@@ -141,6 +143,9 @@ app.post('/delete', function(req, res) {
     res.redirect('/');
   });
 });
+
+
+
 
 
 //the adduser route deals with adding a new user
