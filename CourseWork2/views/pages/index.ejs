@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Main homepage for website. -->
+<html lang="en">
+
+  <head>
+    <!-- Linking Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bannerFade.js"></script>
+    <!-- Adding Metatags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Index</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+
+  </head>
+
+  <body>
+    <!-- Banner Image -->
+    <div class="header">
+      <img src="images/banner4.png" id="banner">
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/index">Retro Database Search</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/index">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+    <!-- Retro Games Introduction -->
+    <header class="masthead">
+      <div class="container1">
+    			<h1>VIDEO GAME DATABASE SEARCH</h1>
+    			<p>Search Games</p>
+    		</div>
+    		<form id="search">
+    			<input type="text" id="query" placeholder="Enter by Title">
+    			<input type="submit" value="Search">
+    		</form>
+    	</header>
+    	<section class="template">
+    		<div class="container2">
+    			<ul id="search-results">
+    				<li class="list-item hidden">
+
+    				</li>
+    			</ul>
+    		</div>
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    		<script type="text/javascript" src="app.js"></script>
+    	</section>
+
+
+
+  </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="footer">
+        <p class="m-0 text-center text-white">Copyright &copy; Team 1 2018</p>
+      </div>
+    </footer>
+
+
+  </body>
+
+</html>
